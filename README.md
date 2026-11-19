@@ -155,6 +155,8 @@ The semantic model follows an optimized **Star Schema** architecture managing **
 
 ## 🧠 Key DAX Measures Implemented
 
+> 📖 **Complete DAX Formula Repository**: [Click here to view the full catalog of all 30+ documented DAX measures with formulas, logic explanations, and return types in DAX_Measures.md](DAX_Measures.md)
+
 The semantic model contains **30+ custom DAX measures**:
 
 ### 1. Dynamic P&L Row Switcher (Matrix Formulation)
