@@ -220,8 +220,8 @@ _Selected & " Performance Trend (vs. LY)"
 1. Clone the repository using Git LFS:
    ```bash
    git lfs install
-   git clone https://github.com/Curious011/Business-Insights-360.git
-   cd Business-Insights-360
+   git clone https://github.com/Curious011/Business-Insights-360-.git
+   cd Business-Insights-360-
    ```
 2. Open **`Business_Insights_360.pbix`** in Power BI Desktop.
 3. Explore the dashboard using the interactive navigation buttons on the **Home** view.
