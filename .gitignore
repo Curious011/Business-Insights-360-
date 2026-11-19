@@ -1,0 +1,15 @@
+# Power BI temporary files and backups
+*.tmp
+*.bak
+~$*
+*.log
+
+# Operating System Files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+.DS_Store
+
+# Analysis Services and Power BI caches
+msmdsrv.port.txt
+AnalysisServicesWorkspaces/
