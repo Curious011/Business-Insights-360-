@@ -17,12 +17,12 @@ An interactive, enterprise-grade **Power BI Business Intelligence & Executive An
 ### The Business Context
 AtliQ Hardware experienced aggressive global expansion across **APAC, EU, North America, and LATAM**. However, as operations scaled, executive leadership faced severe commercial blind spots due to departmental reporting fragmentation:
 1. **Reporting Silos & Excel Scalability Limits:** Finance, Sales, Marketing, and Supply Chain teams operated on separate, static Excel spreadsheets. Generating monthly reports took days, numbers frequently conflicted, and spreadsheets crashed under high data volumes.
-2. **Hidden Losses Behind Explosive Top-Line Growth:** While top-line Net Sales grew **+207.4% YoY** (reaching $823.85M in FY21), bottom-line profitability collapsed into a **-$54.65M net loss** due to uncoordinated pricing, heavy promotional deductions, and skyrocketing operating expenses.
-3. **Supply Chain Bullwhip Effect:** Low demand forecast accuracy and high net forecast errors created costly supply-demand mismatches: severe stockouts of top-selling PC lines alongside millions of dollars in locked-up capital from overstocked peripheral accessories.
+2. **Hidden Losses Behind Explosive Top-Line Growth:** While top-line Net Sales grew **+207.43% YoY** (reaching ₹ 823.85M in FY21), bottom-line profitability collapsed into a **-₹ 54.65M net loss** due to uncoordinated pricing, heavy promotional deductions, and skyrocketing operating expenses.
+3. **Supply Chain Bullwhip Effect:** Demand forecast variances created costly supply-demand mismatches: severe stockouts of top-selling PC lines alongside millions of rupees in locked-up capital from overstocked peripheral accessories.
 
 ### The Analytical Solution
 This end-to-end Power BI reporting system was engineered to deliver transparent, data-driven visibility across five specialized departments:
-* **Executive Strategic Cockpit:** High-level C-Suite KPI dashboard benchmarking revenue, Gross Margin %, Net Profit %, PC Market Share against global competitors (Dell, HP, Lenovo), and Top 5 Customers/Products.
+* **Executive Strategic Cockpit:** High-level C-Suite KPI dashboard benchmarking revenue, Gross Margin %, Net Profit %, PC Market Share against global competitors, and Top 5 Customers/Products.
 * **Dynamic P&L Financial Statement:** Matrix P&L statement utilizing disconnected supporting tables and dynamic DAX format strings with full drill-down capabilities across Fiscal Years, Quarters, Markets, and Product Categories.
 * **Sales Performance & Customer Matrix:** Customer performance scatter plots benchmarking Net Sales vs. Gross Margin % to isolate high-volume/unprofitable accounts and trace pre/post-invoice deduction leakage.
 * **Marketing Profitability Breakdown:** Segment and regional P&L matrix paired with waterfall margin erosion analysis to pinpoint where profit evaporates from Gross Sales to Net Profit.
@@ -50,31 +50,33 @@ This end-to-end Power BI reporting system was engineered to deliver transparent,
 
 ### 1. Overall Financial Performance (FY 2020 vs. FY 2021 Real Actuals)
 
-| Financial Metric | Measure Name | FY 2020 (Benchmark) | FY 2021 (Latest Real) | YoY Change ($) | YoY Growth (%) |
+All financial figures are in **Indian Rupees (₹)**.
+
+| Financial Metric | Measure Name | FY 2020 (Benchmark) | FY 2021 (Latest Real) | YoY Change (₹) | YoY Growth (%) |
 | :--- | :--- | :---: | :---: | :---: | :---: |
-| **Gross Sales** | `SUM(gross_sales_amount)` | **$535.95M** | **$1,664.64M** | +$1,128.69M | **+210.60%** |
-| **Pre-Invoice Deductions** | `[Pre Invoice Deduction]` | $124.69M | $392.50M | +$267.81M | +214.77% |
-| **Net Invoice Sales** | `[Net Invoice Sales]` | $411.25M | $1,272.13M | +$860.88M | +209.33% |
-| **Post-Invoice Deductions** | `[Total Post Invoice Deduction]` | $143.27M | $448.29M | +$305.02M | +212.89% |
-| **Net Sales** | `[Net sales]` | **$267.98M** | **$823.85M** | +$555.87M | **+207.43%** |
-| **Manufacturing Cost** | `[Manufacturing Cost]` | $160.30M | $497.78M | +$337.48M | +210.53% |
-| **Freight Cost** | `[Freight Cost]` | $7.16M | $22.05M | +$14.89M | +207.98% |
-| **Total COGS** | `[Total COGS]` | $168.56M | $523.22M | +$354.66M | +210.41% |
-| **Gross Margin (GM)** | `[Gross Margin]` | **$99.42M** | **$300.63M** | +$201.21M | **+202.37%** |
+| **Gross Sales** | `SUM(gross_sales_amount)` | **₹ 535.95M** | **₹ 1,664.64M** | +₹ 1,128.69M | **+210.60%** |
+| **Pre-Invoice Deductions** | `[Pre Invoice Deduction]` | ₹ 124.69M | ₹ 392.50M | +₹ 267.81M | +214.77% |
+| **Net Invoice Sales** | `[Net Invoice Sales]` | ₹ 411.25M | ₹ 1,272.13M | +₹ 860.88M | +209.33% |
+| **Post-Invoice Deductions** | `[Total Post Invoice Deduction]` | ₹ 143.27M | ₹ 448.29M | +₹ 305.02M | +212.89% |
+| **Net Sales** | `[Net sales]` | **₹ 267.98M** | **₹ 823.85M** | +₹ 555.87M | **+207.43%** |
+| **Manufacturing Cost** | `[Manufacturing Cost]` | ₹ 160.30M | ₹ 497.78M | +₹ 337.48M | +210.53% |
+| **Freight Cost** | `[Freight Cost]` | ₹ 7.16M | ₹ 22.05M | +₹ 14.89M | +207.98% |
+| **Total COGS** | `[Total COGS]` | ₹ 168.56M | ₹ 523.22M | +₹ 354.66M | +210.41% |
+| **Gross Margin (GM)** | `[Gross Margin]` | **₹ 99.42M** | **₹ 300.63M** | +₹ 201.21M | **+202.37%** |
 | **Gross Margin % (GM %)** | `[GM %]` | **37.10%** | **36.49%** | -0.61% | **-1.65%** |
-| **Operational Expenses** | `[Operational Expense]` | **$101.71M** | **$355.28M** | +$253.57M | **+249.30%** |
-| **Net Profit** | `[Net Profit]` | **-$2.29M** | **-$54.65M** | -$52.36M | **Loss Widened** |
+| **Operational Expenses** | `[Operational Expense]` | **₹ 101.71M** | **₹ 355.28M** | +₹ 253.57M | **+249.30%** |
+| **Net Profit** | `[Net Profit]` | **-₹ 2.29M** | **-₹ 54.65M** | -₹ 52.36M | **Loss Widened** |
 | **Net Profit %** | `[Net Profit %]` | **-0.85%** | **-6.63%** | -5.78% | **-676.38%** |
 
 ---
 
 ### 2. Channel Distribution Dynamics (FY 2021)
 
-| Channel | Net Sales ($M) | Revenue Share (%) | Gross Margin (%) | Net Profit ($M) | Net Profit Margin (%) | Commercial Assessment |
+| Channel | Net Sales (₹M) | Revenue Share (%) | Gross Margin (%) | Net Profit (₹M) | Net Profit Margin (%) | Commercial Assessment |
 | :--- | :---: | :---: | :---: | :---: | :---: | :--- |
-| **Retailer** | **$591.97M** | **71.85%** | 35.29% | **-$65.06M** | **-10.99%** | High volume, but heavy discount erosion drives loss |
-| **Direct (AtliQ Stores)**| **$139.46M** | **16.93%** | **41.78%** | **+$2.75M** | **+1.97%** | **+6.5% higher GM%**, protected pricing & profitable |
-| **Distributor** | **$92.42M** | **11.22%** | 36.23% | **+$7.62M** | **+8.25%** | Highest net margin contribution |
+| **Retailer** | **₹ 591.97M** | **71.85%** | 35.29% | **-₹ 65.06M** | **-10.99%** | High volume, but heavy discount erosion drives loss |
+| **Direct (AtliQ Stores)**| **₹ 139.46M** | **16.93%** | **41.78%** | **+₹ 2.75M** | **+1.97%** | **+6.5% higher GM%**, protected pricing & profitable |
+| **Distributor** | **₹ 92.42M** | **11.22%** | 36.23% | **+₹ 7.62M** | **+8.25%** | Highest net margin contribution |
 
 ---
 
@@ -82,53 +84,54 @@ This end-to-end Power BI reporting system was engineered to deliver transparent,
 
 | Metric | Measure Name | FY 2020 | FY 2021 | YoY Shift | Operational Impact |
 | :--- | :--- | :---: | :---: | :---: | :--- |
-| **Forecast Accuracy %** | `[Forecast Accuracy %]` | **72.99%** | **80.21%** | **+7.22%** | Improved forecasting baseline |
+| **Forecast Accuracy %** | `[Forecast Accuracy %]` | **72.99%** | **80.21%** | **+7.22%** | Improved forecasting baseline (+9.88% relative) |
 | **Forecasted Volume** | `SUM(forecast_quantity)` | 21.26M units | 49.41M units | **+132.4%** | Rapid volume ramp-up |
-| **Net Error (Units)** | `[Net Error]` | +491.60K | **-751.71K** | Shift to negative | Under-forecasting shifted to over-forecasting |
+| **Net Error (Units)** | `[Net Error]` | +491.60K | **-751.71K** | Shift to deficit | Under-forecasting shifted to over-forecasting |
 | **Absolute Error (Units)** | `[abs error]` | 5.74M units | **9.78M units** | **+70.30%** | **+4.04M units of physical inventory variance** |
 
 ---
 
 ### 4. Top 5 Customer Performance (Executive View)
 
-| Customer | Channel | Net Sales ($M) | Gross Margin (%) | Net Profit Margin (%) | Strategic Status |
+| Customer | Channel | Net Sales (₹M) | Gross Margin (%) | Net Profit Margin (%) | Strategic Status |
 | :--- | :--- | :---: | :---: | :---: | :--- |
-| **Amazon** | Retailer | **$109.03M** | 35.40% | **-8.89%** | Loss leader; excessive promotional deductions |
-| **AtliQ Exclusive** | Direct | **$79.92M** | **43.73%** | **+1.83%** | **Highest GM% among top accounts & profitable** |
-| **Atliq e Store** | Direct | **$70.31M** | 37.54% | -2.49% | E-commerce channel scaling |
-| **Sage** | Retailer | **$27.07M** | 35.16% | **+6.73%** | Strong regional profitability |
-| **Flipkart** | Retailer | **$25.25M** | 30.23% | **-24.38%** | Severe margin loss; urgent discount renegotiation needed |
+| **Amazon** | Retailer | **₹ 109.03M** | 35.40% | **-8.89%** | Highest sales volume; heavy promotional erosion |
+| **AtliQ Exclusive** | Direct | **₹ 79.92M** | **43.73%** | **+1.83%** | **Highest GM% among top accounts & profitable** |
+| **Atliq e Store** | Direct | **₹ 70.31M** | 37.54% | -2.49% | Scaled direct digital channel |
+| **Sage** | Retailer | **₹ 27.07M** | 35.16% | **+6.73%** | Strong regional profitability |
+| **Flipkart** | Retailer | **₹ 25.25M** | 30.23% | **-24.38%** | Severe margin loss; urgent discount renegotiation needed |
 
 ---
 
 ## 🔍 Deep Analytical Insights
 
 ### 1. Revenue Boom vs. Profit Collapse (Finance View)
-* **The Finding:** While Net Sales surged **207.4% YoY** (reaching $823.85M in FY21), bottom-line profitability collapsed into a **-$54.65M net loss**.
+* **The Finding:** While Net Sales surged **+207.43% YoY** (reaching ₹ 823.85M in FY21 from ₹ 267.98M in FY20), bottom-line profitability collapsed from -₹ 2.29M into a **-₹ 54.65M net operating loss**.
 * **The Root Causes:**
-  1. **Disproportionate Deductions:** Customer discounts and deductions surged by +213.7% to **$840.79M**, consuming **50.5% of total Gross Sales**.
-  2. **Surging Operating Expenses:** Operational overhead scaled faster than margin contribution, spiking **+249.3% YoY** (from $101.71M to $355.28M) to fund rapid international expansion.
-  3. **COGS Inflation:** Freight costs tripled (+207.98% to $22.05M) alongside manufacturing cost inflation (+210.53% to $497.78M).
+  1. **Surging Operating Expenses:** Operational overhead scaled faster than margin contribution, spiking **+249.30% YoY** (from ₹ 101.71M to ₹ 355.28M) to fund aggressive international expansion.
+  2. **COGS & Fulfillment Inflation:** Freight costs tripled (+207.98% to ₹ 22.05M) alongside manufacturing cost inflation (+210.53% to ₹ 497.78M), pushing Total COGS up to ₹ 523.22M.
+  3. **Pre & Post-Invoice Deductions:** Upfront contract discounts (₹ 392.50M) and post-invoice promotional rebates (₹ 448.29M) totaled ₹ 840.79M, reducing Gross Sales (₹ 1,664.64M) by over 50% down to Net Sales (₹ 823.85M).
 * **Strategic Recommendation:** Establish strict discount governance tiers on high-volume accounts and enforce regional OPEX budget caps tied directly to gross margin contribution.
 
 ---
 
 ### 2. The Supply Chain Paradox (Supply Chain View)
-* **The Finding:** Forecast Accuracy improved by **7.2 percentage points (73.0% to 80.2%)**, but **Absolute Unit Error surged 70.3% (from 5.7M to 9.8M units)**.
-* **The Mechanism:** Because overall shipment volumes expanded by **+132.4%** (from 21.3M to 49.4M units), a higher percentage accuracy still translated into **4.04 million more misforecasted physical units** in the distribution pipeline.
+* **The Finding:** Forecast Accuracy improved by **7.22 percentage points (72.99% to 80.21%)**, but **Absolute Unit Error surged 70.30% (from 5.74M to 9.78M units)**.
+* **The Mechanism:** Because overall shipment volumes expanded by **+132.4%** (from 21.26M to 49.41M units), a higher percentage accuracy still translated into **4.04 million more misforecasted physical units** across warehouses.
 * **Risk Categorization:**
-  * **Out of Stock Risk:** Net Error in Accessories (-2.13M units) and Peripherals (-318K units) caused delayed order fulfillment and lost retail revenue.
-  * **Excess Inventory Risk:** Net Error in Storage (+1.51M units) created severe warehousing surcharges and working capital lockup.
+  * **Out of Stock Risk:** Net Error in Accessories (-2.13M units), Peripherals (-318K units), and Notebooks (-51K units) caused delayed order fulfillment and lost retail revenue.
+  * **Excess Inventory Risk:** Net Error in Storage (+1.51M units) and Networking (+227K units) created severe warehousing holding costs and working capital lockup.
 * **Strategic Recommendation:** Shift demand planning from monthly static forecasts to weekly rolling consensus forecasts, integrating live retailer POS data from key accounts like Amazon and Flipkart.
 
 ---
 
 ### 3. Channel & Regional Profit Disparities (Sales & Executive Views)
-* **The Finding:** The **Retailer channel** drove **71.85% of total revenue ($592.0M)**, but incurred an **-11.0% net loss**, whereas the **Direct channel** delivered a **+6.5% higher Gross Margin (41.8% vs. 35.3%)** and stayed net profitable (+1.97%).
-* **Regional Divergence:**
-  * **North America:** Generated $177.94M in revenue but suffered the worst regional profit collapse (**-13.67% net profit margin**, -$24.32M loss).
-  * **India:** Delivered the highest single market revenue ($210.67M) but ran at a **-24.65% net loss** due to aggressive price-matching against domestic competitors.
-  * **Europe:** Delivered $200.77M in revenue with disciplined promotional spend, remaining **net profitable (+1.40% margin, +$2.81M)**.
+* **The Finding:** The **Retailer channel** drove **71.85% of total revenue (₹ 591.97M)**, but incurred an **-10.99% net loss (-₹ 65.06M)**, whereas the **Direct channel** delivered a **+6.5% higher Gross Margin (41.78% vs. 35.29%)** and stayed net profitable (+1.97%, +₹ 2.75M).
+* **Regional Divergence (Marketing View):**
+  * **North America (NA):** Generated ₹ 177.94M in revenue but suffered the worst regional profit margin (**-13.67% net profit margin**, -₹ 24.32M loss).
+  * **India:** Delivered the highest single market revenue (₹ 210.67M) but ran at a **-24.65% net loss** due to aggressive promotional price-matching.
+  * **Europe (EU):** Delivered ₹ 200.77M in revenue with disciplined operational spend, remaining **net profitable (+1.40% margin, +₹ 2.81M)**.
+  * **LATAM:** Scaled to ₹ 3.16M in revenue, remaining **net profitable (+6.18% margin, +₹ 0.20M)**.
 
 ---
 
@@ -155,7 +158,7 @@ The semantic model follows an optimized **Star Schema** architecture managing **
 
 ## 🧠 Key DAX Measures Implemented
 
-> 📖 **Complete DAX Formula Repository**: [Click here to view the full catalog of all 30+ documented DAX measures with formulas, logic explanations, and return types in DAX_Measures.md](DAX_Measures.md)
+> 📖 **Complete DAX Formula Repository**: [Click here to view the full catalog of all documented DAX measures with formulas, logic explanations, and return types in DAX_Measures.md](DAX_Measures.md)
 
 The semantic model contains **30+ custom DAX measures**:
 
@@ -169,9 +172,13 @@ SWITCH(
     _SelectedLineItem = "Gross Sales", [Gross Sales],
     _SelectedLineItem = "Pre Invoice Deduction", [Pre Invoice Deduction],
     _SelectedLineItem = "Net Invoice Sales", [Net Invoice Sales],
+    _SelectedLineItem = "Post Discounts", [Post Discounts],
+    _SelectedLineItem = "Post Deductions", [Post Deductions],
+    _SelectedLineItem = "Total Post Invoice Deduction", [Total Post Invoice Deduction],
     _SelectedLineItem = "Net Sales", [Net sales],
     _SelectedLineItem = "Manufacturing Cost", [Manufacturing Cost],
     _SelectedLineItem = "Freight Cost", [Freight Cost],
+    _SelectedLineItem = "Other Cost", [Other Cost],
     _SelectedLineItem = "Total COGS", [Total COGS],
     _SelectedLineItem = "Gross Margin", [Gross Margin],
     _SelectedLineItem = "Gross Margin %", [GM %],
@@ -225,7 +232,7 @@ _Selected & " Performance Trend (vs. LY)"
    git clone https://github.com/Curious011/Business-Insights-360-.git
    cd Business-Insights-360-
    ```
-2. Open **`Business_Insights_360.pbix`** in Power BI Desktop.
+2. Open **`bussiness_insights_360.pbix`** in Power BI Desktop.
 3. Explore the dashboard using the interactive navigation buttons on the **Home** view.
 
 > **Interactive Web Access:** You can also explore the fully interactive report directly in your browser without installing Power BI Desktop:  
